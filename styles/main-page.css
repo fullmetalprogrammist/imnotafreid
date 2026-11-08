@@ -1,0 +1,119 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background-color: #f7f7f5;
+    background-image:
+        linear-gradient(#ececea 1px, transparent 1px),
+        linear-gradient(90deg, #ececea 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-position: -1px -1px;
+    background-attachment: fixed;
+    color: #1c1c1a;
+    font-family: 'Charter', 'Georgia', 'Times New Roman', serif;
+    padding: 50px 30px;
+    min-height: 100vh;
+    font-size: 17.5px;
+    line-height: 1.72;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    border: 1px solid #e2e2de;
+    border-radius: 2px;
+    padding: 3em 3.5em;
+    box-shadow: none;
+    position: relative;
+    background: #ffffff;
+}
+
+
+h1 {
+    font-size: 2em;
+    font-weight: 700;
+    text-transform: none;
+    letter-spacing: -0.01em;
+    margin: 1em 0 0.6em;
+    padding: 0 0 0.3em;
+    border-bottom: 3px solid #1c1c1a;
+    color: #1c1c1a;
+    font-family: 'Charter', 'Georgia', serif;
+}
+
+h1::before {
+    content: '$ ';
+    color: #6a6a62;
+    background: #f4d03f;
+    padding: 0.35em 0.6em;
+    margin-right: 0.8em;
+    font-size: 0.55em;
+    font-weight: 700;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    letter-spacing: 0.1em;
+    vertical-align: middle;
+    position: relative;
+    top: -0.15em;
+    display: inline-block;
+}
+
+h1 .cursor {
+    animation: blink 1.25s steps(1) infinite;
+    color: inherit;
+    font-weight: 700;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+h2 {
+    font-size: 1.42em;
+    font-weight: 700;
+    text-transform: none;
+    letter-spacing: normal;
+    margin: 2.2em 0 0.7em;
+    color: #1c1c1a;
+    padding-bottom: 0.25em;
+    border-bottom: 1px solid #d8d8d2;
+    font-family: 'Charter', 'Georgia', serif;
+}
+
+section { margin-bottom: 35px; }
+
+ul { list-style: none; font-size: inherit; padding-left: 1.6em; margin: 0; }
+
+li { margin: 0.45em 0; position: relative; padding: 0; }
+
+li::before {
+    content: "—";
+    color: #a8a89c;
+    position: absolute;
+    left: -1em;
+}
+
+li:last-child::before { content: "—"; }
+
+a {
+    color: #1c1c1a;
+    text-decoration: none;
+    padding: 0;
+    transition: all .15s;
+    position: relative;
+    border-bottom: 1px solid #1c1c1a;
+    white-space: normal;        
+    overflow-wrap: break-word;  /* перенос длинных слов */
+}
+
+a:hover {
+    background: #f4d03f;
+    color: #1c1c1a;
+    border-bottom-color: transparent;
+}
+
+a::after {
+    content: none;
+}
+
+a:hover::after {
+    opacity: 0;
+}
